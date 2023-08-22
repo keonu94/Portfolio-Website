@@ -1,0 +1,344 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  
+    
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rokkitt:wght@300&display=swap');
+
+  
+  /* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+        /* npm install modern-normalize
+          Resets elements for browser consistency.  
+          https://www.npmjs.com/package/modern-normalize
+        */         
+  
+  /* Component-specific stylesheets, if any. 
+    @import "component1.css";   
+  */
+
+/*   ----- Variables  -----  */
+:root {
+    --gray: rgb(81,81,79, 32);
+    --blue: rgb(147, 170, 202, 79);
+    --yellow: rgb(242, 213, 65, 95);
+    --darkRed: rgb(95, 47, 37, 37);
+    --green: rgb(105, 100, 68, 41);
+    --greenT: rgba(105, 100, 68, .85);
+    --darkRedT: rgba(95, 47, 37, .6);
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {} or :root {} */
+    background-image:url(images/big-sur.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    max-width: 91%;
+    background-repeat: no-repeat;
+    color: var(--yellow);
+    font-family:'Rokkitt', serif; /* Define with at least one font name and its related generic family name.*/
+    margin:0 2% 0 2%;
+    padding:2%;
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header {background-color: var(--gray);
+        color: var(--blue);
+         margin: 2%;
+         padding: 2%;
+         border: 2px solid var(--darkRed);
+         text-align: center;
+        }
+  header img{
+    width: 10%;
+    height: 10%;
+    margin: 0 auto;
+    padding: 2%;}
+  main {background-color: var(--greenT);
+        margin: 5%;
+        padding: 2%;
+        border: 2px solid var(--darkRed);}
+  section {}
+    article {}
+      #topic1 {}
+      #topic2 {}
+  div {}
+  aside {}
+  footer {background-color: var(--gray);
+         color: var(--blue);
+        margin: 2%;
+        padding: 0 2%;
+        border: 2px solid var(--darkRed);}
+  
+  /* ----- Anchors ----- Text links */
+  a {}
+  a:link {}
+  a:hover {}
+  a:active {}
+  a:visited {}
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav {
+    text-align: center;
+    display: flex center;
+  }
+  nav a {
+    background-color:var(--greenT);
+    border: 2px solid var(--darkRed);
+    border-radius:2px 5px 2px 5px;
+    color:var(--yellow);
+    font-size:1.5em;
+    font-weight:bold;
+    line-height:3;
+    margin-right:3px;
+    padding: 2px;
+    text-decoration:none;
+    vertical-align:middle;
+  }
+  nav a:hover {
+    background-color: var(--yellow);
+    color: var(--darkRedT);
+  }
+
+  nav.local {
+    text-align: center;
+    display: flex center;
+  }
+  nav.local a {
+    background-color:var(--darkRedT);
+    border: 2px solid var(--gray);
+    border-radius:2px 2px 2px 2px;
+    color:var(--blue);
+    font-size:1.1em;
+    font-weight:bold;
+    line-height:1;
+    margin-right:2px;
+    padding: 2px;
+    text-decoration:none;
+    vertical-align:middle;
+  }
+  nav.local a:hover {
+    background-color: var(--blue);
+    color: var(--darkRedT);
+  }
+  
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {}
+  
+  h1, h2, h3, h4, h5, h6 {font-family:'Archivo Black', sans-serif;} 
+  h1 {}
+  h2 {}
+  h3 {}
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {
+    border-collapse:collapse;
+    width: 99%;
+  }
+  caption {
+    padding:2%;
+    font-size:1.1em;
+    font-weight:bold;
+  }
+  thead {}
+  tbody {}
+  tfoot {}
+  tr td {
+    border-bottom:2px solid var(--darkRed);
+    min-width:100%;
+    padding:3%;
+    text-align: center;
+    background-color: var(--gray);
+    }
+  tr th {
+    padding:3%;
+    min-width:100%;
+    background-color: var(--darkRedT);
+    font-size:1.3em;
+    font-weight: bold;
+    }
+  th, td {border-bottom:2px solid var(--darkRed);}
+  tr {}
+    tr:nth-child(odd){}
+  th {}
+    th:nth-child(1){text-align:left;}
+    th:nth-child(2){text-align:left;}
+    th:nth-child(3){text-align:center;}
+  td {}
+    td:nth-child(1) {text-align:left;}
+    td:nth-child(2) {text-align:left;}
+    td:nth-child(3) {text-align:center;}
+  colgroup {}
+  data {}
+  datalist {}
+  
+  
+  /*  ----- Form ----- */
+  form {}
+  fieldset {
+    border: 3px solid var(--darkRedT);
+    margin-top:2%;
+    padding:3%;
+  }
+    legend {
+      color: var(--blue);
+      font-size:120%;
+      font-weight:bold;
+    }
+  label {
+    display: block;
+    margin-top:1%;
+  }
+  button, input, select, textarea{
+    font-size:100%;
+    padding:1%;
+    font-family:inherit;
+  }
+  button {
+    border:2px solid var(--darkRed);
+    border-radius:2px;
+    background-color:var(--gray);
+    color:var(--yellow);
+  }
+  input [type="text"],
+  input [type="email"],
+  textarea {width:75%;}
+  output {}
+  meter {}
+  progress {}
+  select {}
+  optgroup {}
+  option {}
+  textarea {
+    height:225px;
+  }
+  :focus{
+    background-color: var(--yellow);
+}
+  *:required{
+    border: 5px solid green;
+  }
+  label.required:after {
+    content:" *";
+    color:red;
+}
+  /* ----- Media ----- */
+  figure {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 2%;
+    padding: 2%;
+  }
+    figcaption {
+        display: block;
+        padding: 2%;
+    }
+    figure img {
+        width:100%;
+        margin:0;
+        padding:0;
+    }
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  i {
+    font-size:140%;
+    color: var(--yellow)
+  }
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 2%;
+    padding: 2%;
+    border-top: 2px solid var(--darkRed);
+  }
+  .gallery figure {
+    width: 25%;
+    margin: 2%;
+    padding: 2%;
+  }
+  .gallery figcaption {
+    display: block;
+    padding: 2%;
+
+  }
+  .gallery img  {
+    width:100%;
+    margin:0%;
+    padding:0%;
+    border: 2px solid var(--darkRed);
+}
+  
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
+  
